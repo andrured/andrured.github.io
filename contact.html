@@ -95,93 +95,88 @@
         </div>
     </div>
     <!-- Navbar End -->
-
-     <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contactanos</h6>
-                <h1>Contacta para Cualquier Consulta</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form bg-white" style="padding: 30px;">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Nombre"
-                                        required="required" data-validation-required-message="Por favor Ingrese su nombre" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Email"
-                                        required="required" data-validation-required-message="Por favor Ingrese su email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Asunto"
-                                    required="required" data-validation-required-message="Por favor Ingrese el Asunto" />
+<!-- Contact Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contactanos</h6>
+            <h1>Contacta para Cualquier Consulta</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form bg-white" style="padding: 30px;">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" method="post" action="enviarConsulta.php" novalidate="novalidate"> <!-- Añadido method y action -->
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" class="form-control p-4" id="name" name="nombre" placeholder="Nombre" required="required" data-validation-required-message="Por favor Ingrese su nombre" />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Mensaje"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
+                            <div class="control-group col-sm-6">
+                                <input type="email" class="form-control p-4" id="email" name="email" placeholder="Email" required="required" data-validation-required-message="Por favor Ingrese su email" />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="text-center">
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Enviar Mensaje</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control p-4" id="subject" name="asunto" placeholder="Asunto" required="required" data-validation-required-message="Por favor Ingrese el Asunto" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control py-3 px-4" rows="5" id="message" name="mensaje" placeholder="Mensaje" required="required" data-validation-required-message="Por favor ingrese su mensaje"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Contact End -->
 
-    <!-- Formulario de Reserva -->
-    <div class="container mt-5">
-        <h1 class="titulo text-center mb-4">Reserva tu Habitación</h1>
-        <form class="form-reserva" action="reservar" method="post">
-            <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="telefono">Número de Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="fecha-entrada">Fecha de Entrada</label>
-                <input type="date" class="form-control" id="fecha-entrada" name="fecha_entrada" required>
-            </div>
-            <div class="form-group">
-                <label for="fecha-salida">Fecha de Salida</label>
-                <input type="date" class="form-control" id="fecha-salida" name="fecha_salida" required>
-            </div>
-            <div class="form-group">
-                <label for="habitacion">Tipo de Habitación</label>
-                <select class="form-control" id="habitacion" name="habitacion" required>
-                    <option value="individual">Individual</option>
-                    <option value="doble">Doble</option>
-                    <option value="suite">Suite</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="personas">Número de Personas</label>
-                <input type="number" class="form-control" id="personas" name="personas" min="1" max="10" required>
-            </div>
-            <button class="btn btn-primary btn-block" type="submit">Reservar</button>
-        </form>
-    </div>
-    <!-- Fin del Formulario de Reserva -->
+<!-- Formulario de Reserva -->
+<div class="container mt-5">
+    <h1 class="titulo text-center mb-4">Reserva tu Habitación</h1>
+    <form class="form-reserva" action="reservar_habitacion.php" method="post"> <!-- Añadido action y method -->
+        <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Número de Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="fecha-entrada">Fecha de Entrada</label>
+            <input type="date" class="form-control" id="fecha-entrada" name="fecha_entrada" required>
+        </div>
+        <div class="form-group">
+            <label for="fecha-salida">Fecha de Salida</label>
+            <input type="date" class="form-control" id="fecha-salida" name="fecha_salida" required>
+        </div>
+        <div class="form-group">
+            <label for="habitacion">Tipo de Habitación</label>
+            <select class="form-control" id="habitacion" name="habitacion" required>
+                <option value="individual">Individual</option>
+                <option value="doble">Doble</option>
+                <option value="suite">Suite</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="personas">Número de Personas</label>
+            <input type="number" class="form-control" id="personas" name="personas" min="1" max="10" required>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Reservar</button>
+    </form>
+</div>
+<!-- Fin del Formulario de Reserva -->
+
 <!-- Footer Start -->
 <div class="footer-container" style="background-color: #1d1d1d; color: #cfcfcf; padding: 40px 20px; margin-top: 50px;">
     <div class="footer-content" style="max-width: 1200px; margin: 0 auto;">
