@@ -1,30 +1,37 @@
 <?php
 // Conexión a la base de datos
-$servername = "tu_servidor";
-$username = "tu_usuario";
-$password = "tu_contraseña";
-$dbname = "tu_base_de_datos";
-
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "avistamientos";
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
 // Obtener datos del formulario
 $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];
+$tour = $_POST['tour'];
 
-// Insertar datos en la base de datos
-$sql = "INSERT INTO usuarios (nombre, correo) VALUES ('$nombre', '$correo')";
+// Preparar y ejecutar la inserción
+$sql = "INSERT INTO usuarios (nombre, correo, tour) VALUES (?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ssi", $nombre, $correo, $tour);
 
-if ($conn->query($sql) === TRUE) {
+if ($stmt->execute()) {
     echo "Nuevo registro creado correctamente";
+    
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $stmt->error;
 }
 
+header('Location:exito.html');
+// Cerrar la conexión
+$stmt->close();
 $conn->close();
+
 ?>
