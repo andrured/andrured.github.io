@@ -678,13 +678,33 @@
         </div>
     </div>
   </div>
-   <!-- Blog End -->
+
+    <!-- Chatbot Container -->
+<div class="chatbot-container">
+    <!-- Botón flotante para desplegar el chat -->
+    <div id="chat-button" onclick="toggleChat()">
+        <img src="imagenes vaupes/chat-bot.png" alt="Chat" style="width: 30px; height: 30px;"> Chat
+    </div>
+
+    <!-- Contenedor del Chatbot -->
+    <div id="chat-container" class="hidden">
+        <div class="chat-header">
+            <span style="border-radius: 50%;">Digita "menu" para desplegar opciones</span>
+            
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe tu opcion...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+</div>
 
 
+<!-- Blog End -->
 
- <!-- Footer Start -->
- <div class="footer-container" style="background-color: #1d1d1d; color: #cfcfcf; padding: 40px 20px; margin-top: 50px; position: relative; width: 100vw; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
-
+<!-- Footer Start -->
+<div class="footer-container" style="background-color: #1d1d1d; color: #cfcfcf; padding: 40px 20px; margin-top: 50px; position: relative; width: 100vw; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
     <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="footer-columns" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
             <!-- Company Info -->
@@ -720,28 +740,27 @@
 </div>
 <!-- Footer End -->
 
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 
+<script src="app.js"></script>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 </html>

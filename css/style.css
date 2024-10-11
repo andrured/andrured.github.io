@@ -9849,3 +9849,111 @@ h6,
 .btn-reserva:hover {
   background-color: #218838;
 }
+
+/* aaqui empieza el chatbot*/
+/* Estilos generales del chatbot */
+.chatbot-container {
+  position: fixed; /* Mantener el contenedor en una posición fija */
+  bottom: 20px; /* Espacio desde la parte inferior */
+  right: 20px; /* Espacio desde la derecha */
+  z-index: 1000; /* Asegurarse de que el chatbot esté encima de otros elementos */
+  border-radius: 10px; /* Bordes redondeados del contenedor */
+  overflow: hidden; /* Para que el contenido no se salga de los bordes redondeados */
+}
+
+/* Botón flotante para desplegar el chat */
+#chat-button {
+  display: flex; /* Flexbox para alinear el logo y el texto */
+  align-items: center; /* Alinear verticalmente al centro */
+  background-color: #28a745; /* Color de fondo azul */
+  color: #ffffff; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno */
+  /*border-radius: 25px;  Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar el mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+  transition: background-color 0.3s; /* Transición para el cambio de color */
+  
+}
+
+#chat-button:hover {
+  background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos del encabezado del chatbot */
+.chat-header {
+  background-color: #218838; /* Color de fondo verde */
+  color: #ffffff; /* Color del texto */
+  padding: 10px; /* Espaciado */
+  display: flex; /* Flexbox para el encabezado */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar elementos verticalmente */
+  border-top-left-radius: 5px; /* Bordes redondeados en la parte superior izquierda */
+  border-top-right-radius: 5px; /* Bordes redondeados en la parte superior derecha */
+}
+
+/* Estilo del área del chat */
+.chat-box {
+  max-height: 300px; /* Altura máxima */
+  overflow-y: auto; /* Habilitar desplazamiento vertical */
+  padding: 10px; /* Espaciado interno */
+  border-bottom-left-radius: 10px; /* Bordes redondeados en la parte inferior izquierda */
+  border-bottom-right-radius: 10px; /* Bordes redondeados en la parte inferior derecha */
+  background-color: #ffffff; /* Fondo blanco para el área del chat */
+  
+}
+
+/* Mensaje del usuario */
+.user-message {
+  background-color: #d1e7dd; /* Color de fondo del mensaje del usuario */
+  padding: 8px; /* Espaciado interno */
+  margin: 5px 0; /* Margen vertical */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: right; /* Alinear a la derecha */
+  max-width: 80%; /* Ancho máximo del mensaje */
+}
+
+/* Mensaje del bot */
+.bot-message {
+  background-color: #cfe2ff; /* Color de fondo del mensaje del bot */
+  padding: 8px; /* Espaciado interno */
+  margin: 5px 0; /* Margen vertical */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: left; /* Alinear a la izquierda */
+  max-width: 80%; /* Ancho máximo del mensaje */
+}
+
+/* Input y botón de enviar */
+.chat-input {
+  display: flex; /* Flexbox para alinear los elementos */
+  padding: 10px; /* Espaciado interno */
+  background-color: #f1f1f1; /* Color de fondo del input */
+  border-top: 1px solid #ccc; /* Borde superior */
+}
+
+.chat-input input {
+  flex: 1; /* Permitir que el input ocupe todo el espacio */
+  padding: 10px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  margin-right: 10px; /* Espaciado a la derecha */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+.chat-input button {
+  background-color: #28a745; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Transición para el cambio de color */
+}
+
+.chat-input button:hover {
+  background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+/* Ocultar el contenedor */
+.hidden {
+  display: none; /* Ocultar el contenedor */
+}
