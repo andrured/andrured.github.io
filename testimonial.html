@@ -102,7 +102,7 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Comenta y dajamos saber tu opinión!</h3>
+                <h3 style="text-align: center;" class="display-4 text-white text-uppercase">Comenta y dajamos saber tu opinión!</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Inicio</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
@@ -130,10 +130,10 @@
                 </div>
             </div>
             <div class="text-center">
-                <img class="img-fluid mx-auto" src="img/destination-1.jpg" style="width: 100px; height: 100px;">
+                <img class="img-fluid mx-auto" src="img/destination-1.jpg" style="width: 100px; height: 100px; object-fit: cover;">
                 <div class="testimonial-text bg-white p-4 mt-n5">
                     <p class="mt-5">"La comida tradicional de Vaupés es simplemente deliciosa. Aprender sobre la cultura indígena mientras degustaba platillos típicos fue una experiencia enriquecedora."</p>
-                    <h5 class="text-truncate">Jorge Ramírez</h5>
+                    <h5 class="text-truncate">Valentina</h5>
                     <span>Turista Gastronómico</span>
                 </div>
             </div>
@@ -196,6 +196,27 @@
 </div>
 <!-- Footer End -->
 
+  <!-- Chatbot Container -->
+  <div class="chatbot-container">
+    <!-- Botón flotante para desplegar el chat -->
+    <div id="chat-button" onclick="toggleChat()">
+        <img src="imagenes vaupes/chat-bot.png" alt="Chat" style="width: 39px; height: 39px;">
+    </div>
+
+    <!-- Contenedor del Chatbot -->
+    <div id="chat-container" class="hidden">
+        <div class="chat-header">
+            <span style="border-radius: 50%;">Digita "menu" para desplegar opciones</span>
+            
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe tu opcion...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+</div>
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -216,6 +237,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

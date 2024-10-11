@@ -9500,8 +9500,8 @@ h6,
 .back-to-top {
   position: fixed;
   display: none;
-  right: 45px;
-  bottom: 45px;
+  left: 25px;
+  bottom: 25px;
   z-index: 11;
 }
 
@@ -9850,7 +9850,7 @@ h6,
   background-color: #218838;
 }
 
-/* aaqui empieza el chatbot*/
+/* Aquí empieza el chatbot */
 /* Estilos generales del chatbot */
 .chatbot-container {
   position: fixed; /* Mantener el contenedor en una posición fija */
@@ -9859,20 +9859,41 @@ h6,
   z-index: 1000; /* Asegurarse de que el chatbot esté encima de otros elementos */
   border-radius: 10px; /* Bordes redondeados del contenedor */
   overflow: hidden; /* Para que el contenido no se salga de los bordes redondeados */
+  width: 75px; /* Ancho pequeño por defecto */
+  height: 60px; /* Altura pequeña por defecto */
+  transition: all 0.3s ease; /* Transición suave para agrandar el contenedor */
+}
+
+.chatbot-container.open {
+  width: 350px; /* Ancho del contenedor cuando está abierto */
+  height: 500px; /* Altura del contenedor cuando está abierto */
 }
 
 /* Botón flotante para desplegar el chat */
 #chat-button {
   display: flex; /* Flexbox para alinear el logo y el texto */
   align-items: center; /* Alinear verticalmente al centro */
-  background-color: #28a745; /* Color de fondo azul */
+  justify-content: center; /* Centrar el ícono */
+  background-color: #28a745; /* Color de fondo verde */
   color: #ffffff; /* Color del texto */
-  padding: 10px 15px; /* Espaciado interno */
-  /*border-radius: 25px;  Bordes redondeados */
+  width: 60px; /* Tamaño pequeño del botón por defecto */
+  height: 60px; /* Tamaño pequeño del botón por defecto */
+  border-radius: 50%; /* Hacer el botón redondo */
   cursor: pointer; /* Cambiar cursor al pasar el mouse */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
-  transition: background-color 0.3s; /* Transición para el cambio de color */
-  
+  transition: all 0.3s ease; /* Transición suave para agrandar el botón */
+}
+
+.chatbot-container.open #chat-button {
+  width: 100%; /* Ajustar el botón al tamaño completo del chatbot cuando está abierto */
+  height: auto; /* Ajustar la altura del botón al contenido */
+  border-radius: 0; /* Quitar la forma redonda cuando está abierto */
+  justify-content: space-between; /* Alinear los íconos y texto correctamente */
+  padding: 10px 15px; /* Espaciado adecuado */
+}
+
+#chat-button i {
+  font-size: 24px; /* Tamaño del ícono */
 }
 
 #chat-button:hover {
@@ -9889,6 +9910,8 @@ h6,
   align-items: center; /* Centrar elementos verticalmente */
   border-top-left-radius: 5px; /* Bordes redondeados en la parte superior izquierda */
   border-top-right-radius: 5px; /* Bordes redondeados en la parte superior derecha */
+  width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+  box-sizing: border-box;
 }
 
 /* Estilo del área del chat */
@@ -9899,7 +9922,12 @@ h6,
   border-bottom-left-radius: 10px; /* Bordes redondeados en la parte inferior izquierda */
   border-bottom-right-radius: 10px; /* Bordes redondeados en la parte inferior derecha */
   background-color: #ffffff; /* Fondo blanco para el área del chat */
-  
+  width: 100%; /* Ancho completo del chat-box */
+  display: none; /* Ocultar el chat-box cuando el chatbot está cerrado */
+}
+
+.chatbot-container.open .chat-box {
+  display: block; /* Mostrar el chat-box cuando el chatbot está abierto */
 }
 
 /* Mensaje del usuario */
@@ -9928,6 +9956,8 @@ h6,
   padding: 10px; /* Espaciado interno */
   background-color: #f1f1f1; /* Color de fondo del input */
   border-top: 1px solid #ccc; /* Borde superior */
+  width: 100%; /* Ancho completo del input */
+  box-sizing: border-box;
 }
 
 .chat-input input {

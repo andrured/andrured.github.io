@@ -356,7 +356,26 @@
     </div>
     <!-- Footer End -->
 
+  <!-- Chatbot Container -->
+  <div class="chatbot-container">
+    <!-- Botón flotante para desplegar el chat -->
+    <div id="chat-button" onclick="toggleChat()">
+        <img src="imagenes vaupes/chat-bot.png" alt="Chat" style="width: 39px; height: 39px;">
+    </div>
 
+    <!-- Contenedor del Chatbot -->
+    <div id="chat-container" class="hidden">
+        <div class="chat-header">
+            <span style="border-radius: 50%;">Digita "menu" para desplegar opciones</span>
+            
+        </div>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe tu opcion...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+</div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -377,6 +396,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
