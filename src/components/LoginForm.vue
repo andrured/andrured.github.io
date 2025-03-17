@@ -25,15 +25,16 @@ function submitForm() {
 
     <form @submit.prevent="submitForm">
       <div class="form-group">
-        <label for="email">Número de identificación:</label>
+        <label for="username">Usuario:</label>
         <input 
-          type="email" 
-          id="email" 
-          placeholder="Ingrese su número de documento" 
-          v-model="email" 
+          type="text" 
+          id="username" 
+          placeholder="Ingrese su usuario" 
+          v-model="username" 
           required
         >
       </div>
+
 
       <div class="form-group">
         <label for="password">Clave personal:</label>
